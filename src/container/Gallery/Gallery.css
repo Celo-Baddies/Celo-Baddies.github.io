@@ -1,16 +1,4 @@
-@font-face {
-    font-family: "Blue";
-    src: url('./blue/Blue.ttf') format('truetype');
-}
-@font-face {
-    font-family: "Serif";
-    src: url('./square-sans-serif-7/square_sans_serif_7.ttf') format('truetype');
-}
 
-@font-face {
-    font-family: "Sledge";
-    src: url('./sledge/sledge.regular.ttf') format('truetype');
-}
 .app__wrapper{
     background-image:url(./Avatar3.png); 
    background-color: rgba(45, 3, 59, 1); 
@@ -43,7 +31,6 @@
     color: #fff;
     font-family: 'blue';
     font-weight: 100;
-    /* margin: 2rem 0; */
     font-size: 2px;
     letter-spacing: 2px;
 

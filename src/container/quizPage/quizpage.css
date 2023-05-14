@@ -1,0 +1,111 @@
+.quizpage-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url('../../assets/avatar6.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizpage-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(45, 3, 59, 0.808), #0E0012);
+}
+
+.quizpage-inner {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.quizpage-inner h2 {
+    font-family: 'Serif';
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.quizpage-inner img {
+    width: 70%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.quizpage-inner img:last-of-type {
+    margin-top: 10px;
+}
+
+.quizpage-inner img:hover {
+    width: 72.5%;
+}
+
+
+
+
+.modal {
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    /* adjust opacity as desired */
+    /* transform: skew(-50deg); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal img {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    border-radius: 5px;
+    background-color: transparent;
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0px;
+    right: 40px;
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}

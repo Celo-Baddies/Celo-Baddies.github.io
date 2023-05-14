@@ -1,0 +1,72 @@
+.quizmint-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url('../../assets/avatar6.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizmint-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(45, 3, 59, 0.808), #0E0012);
+}
+
+.quizmint-inner {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.quizmint-inner h2 {
+    font-family: 'Serif';
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: white;
+    margin: 10px 0px;
+}
+
+.quizmint-inner p {
+    font-family: 'Blue';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    color: white;
+    text-align: center;
+}
+
+.quizmint-inner>img {
+    width: 75%;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: 0.5s ease-in-out;
+}
+
+.quizmint-inner button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.quizmint-inner button {
+    width: 500px;
+    height: 90px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 40px;
+    border: none;
+}
