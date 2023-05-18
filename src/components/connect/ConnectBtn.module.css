@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Blue';
+  /* src: url('./blue/Blue.ttf') format('truetype'); */
+  src: url('../../fonts/blue/Blue.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Serif';
+  src: url('../../fonts/square-sans-serif-7/square_sans_serif_7.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'Sledge';
+  src: url('../../fonts/sledge/sledge.regular.ttf') format('truetype');
+}
+
+.parallelogram {
+  box-sizing: border-box;
+  width: 506.5px;
+  height: 72px;
+  left: 468px;
+  top: 522px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: linear-gradient(
+    97.86deg,
+    rgba(45, 3, 59, 0.6) 11.06%,
+    rgba(232, 15, 136, 0.6) 107.09%
+  );
+  color: #fff;
+  font-family: 'Serif';
+  font-weight: bold;
+  font-size: 1.9rem;
+  border: 1px solid #f56eb3;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}

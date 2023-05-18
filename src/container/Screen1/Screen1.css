@@ -1,99 +1,95 @@
 @font-face {
-    font-family: "Blue";
-    src: url('./blue/Blue.ttf') format('truetype');
+  font-family: 'Blue';
+  src: url('./blue/Blue.ttf') format('truetype');
 }
 @font-face {
-    font-family: "Serif";
-    src: url('./square-sans-serif-7/square_sans_serif_7.ttf') format('truetype');
+  font-family: 'Serif';
+  src: url('./square-sans-serif-7/square_sans_serif_7.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: "Sledge";
-    src: url('./sledge/sledge.regular.ttf') format('truetype');
-}
-body{
-
-}
-.app__wrapper{
-     background-image:url(./Avatar3.png); 
-    background-color: rgba(45, 3, 59, 1); 
-    background-repeat: no-repeat;
-}
-.app_landing{
-    background-image: url(./purple.png);
-    background-color: rgba(45, 3, 59, 1);
-   background-repeat: no-repeat;
-}
-.app_landing_text1{
-    color: #fff;
-    font-family: 'Serif';
-    text-transform:uppercase;
-    margin: 2rem 0;
-    font-size: 70px;
-    letter-spacing: 2px;
-}
-.app_landing_text2{
-    color: #fff;
-    font-family: 'Blue';
-    margin: 2rem 0;
-    font-size: 30px;
-    letter-spacing: 2px;
+  font-family: 'Sledge';
+  src: url('./sledge/sledge.regular.ttf') format('truetype');
 }
 
-.app_landing_text3{
-    color: #fff;
-    font-family: 'blue';
-    font-weight: 100;
-    /* margin: 2rem 0; */
-    font-size: 20px;
-    letter-spacing: 2px;
-
+.app__wrapper {
+  background-image: url(./Avatar3.png);
+  background-color: rgba(45, 3, 59, 1);
+  background-repeat: no-repeat;
+}
+.app_landing {
+  background-image: url(./purple.png);
+  background-color: rgba(45, 3, 59, 1);
+  background-repeat: no-repeat;
+}
+.app_landing_text1 {
+  color: #fff;
+  font-family: 'Serif';
+  text-transform: uppercase;
+  margin: 2rem 0;
+  font-size: 70px;
+  letter-spacing: 2px;
+}
+.app_landing_text2 {
+  color: #fff;
+  font-family: 'Blue';
+  margin: 2rem 0;
+  font-size: 30px;
+  letter-spacing: 2px;
 }
 
-.app_landing_text4{
-    color: #fff;
-    font-family: 'blue';
-    font-weight: 100;
-    /* margin: 2rem 0; */
-    font-size: 30px;
-    letter-spacing: 2px;
-
-}
-.app_landing_btn{
-    /* position: absolute; */
-    width: 400.5px;
-    height: 72px;
-    left: 460px;
-    top: 575px;
-    /* border-color: #E80F88; */
-    
-    /* outline-style: outset; */
+.app_landing_text3 {
+  color: #fff;
+  font-family: 'blue';
+  font-weight: 100;
+  /* margin: 2rem 0; */
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
-.navbar{
-    top: 0%;
-    left: 5%;
-    position: fixed;
-    width: 90%;
-    display: flex;
-    margin: 0 20px;
-    justify-content: space-between;
-    align-items: start;
-    /* background: var(--color-black); */
-    padding: 3rem 2rem;
+.app_landing_text4 {
+  color: #fff;
+  font-family: 'blue';
+  font-weight: 100;
+  /* margin: 2rem 0; */
+  font-size: 30px;
+  letter-spacing: 2px;
 }
-.app_landing_info{
-    position: fixed;
-    top: 50%;
-    left: 50%;
+.app_landing_btn {
+  /* position: absolute; */
+  width: 400.5px;
+  height: 72px;
+  left: 460px;
+  top: 575px;
+  /* border-color: #E80F88; */
+
+  /* outline-style: outset; */
+}
+
+.navbar {
+  top: 0%;
+  left: 5%;
+  position: fixed;
+  width: 90%;
+  display: flex;
+  margin: 0 20px;
+  justify-content: space-between;
+  align-items: start;
+  /* background: var(--color-black); */
+  padding: 3rem 2rem;
+}
+.app_landing_info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
   /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-    font-family: 'Blue';
-    text-align: center;
+  transform: translate(-50%, -50%);
+  font-family: 'Blue';
+  text-align: center;
 }
 
-.app__navbar-text-logo{
-    font-family: 'Blue';
+.app__navbar-text-logo {
+  font-family: 'Blue';
   color: var(--color-white);
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -103,13 +99,34 @@ body{
   font-size: 55px;
   cursor: pointer;
 }
-.app__navbar-logo{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.app__navbar_login{
+.app__navbar_login {
+  width: 250px;
+  cursor: pointer;
+}
 
-    width: 250px;
-    cursor: pointer;
+.proceed {
+  box-sizing: border-box;
+  width: 506.5px;
+  height: 72px;
+  left: 468px;
+  top: 522px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: linear-gradient(
+    97.86deg,
+    rgba(45, 3, 59, 0.6) 11.06%,
+    rgba(232, 15, 136, 0.6) 107.09%
+  );
+  color: #fff;
+  font-family: 'Serif';
+  font-weight: bold;
+  font-size: 1.9rem;
+  border: 1px solid #f56eb3;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
 }
