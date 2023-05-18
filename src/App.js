@@ -13,6 +13,7 @@ import PickTopic from './container/pickTopic/PickTopic'
 import ChatScreen from './container/chatScreen/ChatScreen'
 import QuizPage from './container/quizPage/QuizPage'
 import QuizMint from './container/quizMint/QuizMint'
+import Category from './container/Category/category'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/' element={<Landing />} />
         <Route path='connect-wallet' element={<Screen1 />} />
         <Route path='welcome-onboard' element={<Gallery />} />
+        <Route path='category' element={<Category />} />
         <Route path='pick-topic' element={<PickTopic />} />
         <Route path='chat' element={<ChatScreen />} />
         <Route path='quiz' element={<QuizPage />} />

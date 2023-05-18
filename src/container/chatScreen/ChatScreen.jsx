@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import './chatScreen.css'
+import trainer from '../../assets/trainer.png'
+import learner from '../../assets/learner.png'
 
 function ChatScreen() {
   // navigate
@@ -58,10 +60,16 @@ function ChatScreen() {
           {stepper >= 1 && (
             <div className='animate__animated animate__fadeInUp chatscreenstart right'>
               <div className='chatscreen-chatitem'>Let's get started</div>
+              <div>
+                <img src={learner} alt='' />
+              </div>
             </div>
           )}
           {stepper >= 1 && (
             <div className='animate__animated animate__fadeInUp animate__delay-2s chatscreenstart left'>
+              <div>
+                <img src={trainer} alt='' />
+              </div>
               <div className='chatscreen-chatitem'>
                 Introduction to blockchain technology
               </div>
@@ -72,10 +80,16 @@ function ChatScreen() {
               <div className='chatscreen-chatitem'>
                 What is Blockchain technology
               </div>
+              <div>
+                <img src={learner} alt='' />
+              </div>
             </div>
           )}
           {stepper >= 2 && (
             <div className='animate__animated animate__fadeInUp animate__delay-2s chatscreenstart left'>
+              <div>
+                <img src={trainer} alt='' />
+              </div>
               <div className='chatscreen-chatitem'>
                 Blockchain technology is a decentralized and distributed ledger
                 system that allows multiple parties to record and verify
@@ -92,10 +106,16 @@ function ChatScreen() {
               <div className='chatscreen-chatitem'>
                 History of blockchain technology
               </div>
+              <div>
+                <img src={learner} alt='' />
+              </div>
             </div>
           )}
           {stepper >= 3 && (
             <div className='animate__animated animate__fadeInUp animate__delay-2s chatscreenstart left'>
+              <div>
+                <img src={trainer} alt='' />
+              </div>
               <div className='chatscreen-chatitem'>
                 Before the emergence of blockchain technology, financial
                 institutions like banks have always been the ultimate source of
@@ -107,6 +127,9 @@ function ChatScreen() {
           )}
           {stepper >= 3 && (
             <div className='animate__animated animate__fadeInUp animate__delay-2s chatscreenstart left'>
+              <div>
+                <img src={trainer} alt='' />
+              </div>
               <div className='chatscreen-chatitem'>
                 At its core, a blockchain is a chain of blocks, where each block
                 contains a list of transactions. These blocks are linked
@@ -122,10 +145,16 @@ function ChatScreen() {
               <div className='chatscreen-chatitem'>
                 What are the features of Blockchain
               </div>
+              <div>
+                <img src={learner} alt='' />
+              </div>
             </div>
           )}
           {stepper >= 4 && (
             <div className='animate__animated animate__fadeInUp animate__delay-2s chatscreenstart left'>
+              <div>
+                <img src={trainer} alt='' />
+              </div>
               <div className='chatscreen-chatitem'>
                 Decentralization: Instead of relying on a central authority like
                 a bank or government, blockchain operates on a network of
@@ -138,6 +167,9 @@ function ChatScreen() {
 
           {stepper >= 4 && (
             <div className='animate__animated animate__fadeInUp animate__delay-2s chatscreenstart left'>
+              <div>
+                <img src={trainer} alt='' />
+              </div>
               <div className='chatscreen-chatitem'>
                 Transparency: The blockchain ledger is open and transparent,
                 meaning anyone can view and audit the transaction history. This
@@ -149,6 +181,9 @@ function ChatScreen() {
 
           {stepper >= 4 && (
             <div className='animate__animated animate__fadeInUp animate__delay-2s chatscreenstart left'>
+              <div>
+                <img src={trainer} alt='' />
+              </div>
               <div className='chatscreen-chatitem'>
                 Security: Blockchain employs advanced cryptographic techniques
                 to secure the data. Each block is cryptographically linked to
@@ -160,6 +195,9 @@ function ChatScreen() {
           )}
           {stepper >= 4 && (
             <div className='animate__animated animate__fadeInUp animate__delay-2s chatscreenstart left'>
+              <div>
+                <img src={trainer} alt='' />
+              </div>
               <div className='chatscreen-chatitem'>
                 Immutability: Once a block is added to the blockchain, it is
                 extremely difficult to modify or delete the data contained
@@ -171,6 +209,9 @@ function ChatScreen() {
           )}
           {stepper >= 4 && (
             <div className='animate__animated animate__fadeInUp animate__delay-2s chatscreenstart left'>
+              <div>
+                <img src={trainer} alt='' />
+              </div>
               <div className='chatscreen-chatitem'>
                 Blockchain technology has expanded beyond cryptocurrencies and
                 found applications in various industries, including finance,
@@ -183,6 +224,9 @@ function ChatScreen() {
           )}
           {stepper >= 4 && (
             <div className='animate__animated animate__fadeInUp animate__delay-3s chatscreenstart left'>
+              <div>
+                <img src={trainer} alt='' />
+              </div>
               <div
                 className='chatscreen-chatitem'
                 style={{ marginBottom: '150px' }}

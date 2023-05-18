@@ -1,0 +1,60 @@
+.picktopic-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: url('../../assets/avatar6.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picktopic-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(45, 3, 59, 0.808), #0e0012);
+}
+
+.picktopic-inner {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.picktopic-inn {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: auto auto auto;
+}
+
+.picktopic-inner h2 {
+  font-family: 'Serif';
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: white;
+  margin: 50px 0px;
+}
+
+.picktopic-inner img {
+  width: 75%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.picktopic-inner img:last-of-type {
+  margin-top: 10px;
+}
+
+.picktopic-inner img:hover {
+  width: 75.5%;
+}

@@ -41,7 +41,7 @@ const WalletConnect = () => {
         <img
           src={images.group4}
           style={{ cursor: 'pointer' }}
-          onClick={() => navigate('/pick-topic')}
+          onClick={() => navigate('/Category')}
         />
 
         {/* <button type='button' className='app_landing_btn' onClick={() => navigate('connect-wallet')}>Connect Wallet</button> */}
