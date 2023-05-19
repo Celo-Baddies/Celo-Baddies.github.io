@@ -9,8 +9,6 @@ import Navbar from '../../components/navbar/Navbar'
 import './quizpage.css'
 
 function QuizPage() {
-  localStorage.setItem('score',0);
-
   const navigate = useNavigate()
   const [answerWrong, setAnswerWrong] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -22,18 +20,26 @@ function QuizPage() {
   const closeModal = () => {
     setIsModalOpen(false)
   }
-  let getAnswer = JSON.parse(localStorage.getItem('score'));
-  console.log(getAnswer+2);
+
+  function getPoint(correct, mark) {
+    let point = 20
+    if (correct) {
+      return { mark }
+    }
+    return { mark }
+  }
+  let totalPoints = 0;
 
   function checkAnswer (e) {
-    
+   
     let options = document.getElementsByClassName('options')
     for( let i = 0; i < options.length; i++){
         let answer = options[i];
         if (answer.className === 'correct'){
+          totalPoints += 2;
           setIsModalOpen(true);
           setAnswerWrong(false);
-          
+          console.log(totalPoints);
 
         } else if (answer.className = 'not-correct') {
           setAnswerWrong(true);
@@ -46,22 +52,20 @@ function QuizPage() {
     <div className='quizpage-container'>
       <Navbar />
       <div className='quizpage-inner'>
-        <h2>What is blockchain technology?</h2>
+        <h2>Which of the following describes Immutability in blockchain?</h2>
 
           <ul className="options">
 
-            <li className='correct'> <img
-          
-          src={Q1A}
+            <li className='not-correct' onClick={checkAnswer}> <img src={images.q5a}
           alt=''
           onClick={() => setIsModalOpen(true)}
         /></li>
 
-        <li className='not-correct' onClick={checkAnswer}><img src={Q1B} alt='' onClick={() => setIsModalOpen(true)} /></li>
+        <li className='correct'><img src={images.q5b} alt='' onClick={() => setIsModalOpen(true)} /></li>
 
-        <li className='not-correct' onClick={checkAnswer}><img  src={Q1C} alt='' onClick={() => setIsModalOpen(true)} /></li>
+        <li className='not-correct' onClick={checkAnswer}><img  src={images.q5c} alt='' onClick={() => setIsModalOpen(true)} /></li>
 
-        <li className='not-correct' onClick={checkAnswer}><img src={Q1D} alt='' onClick={() => setIsModalOpen(true)} />
+        <li className='not-correct' onClick={checkAnswer}><img src={images.q5d} alt='' onClick={() => setIsModalOpen(true)} />
     </li>
           </ul>
        
@@ -78,7 +82,7 @@ function QuizPage() {
             <img
               src={images.fail}
               alt=''
-              onClick={() => navigate('/quiz2')}
+              onClick={() => navigate('/certificate')}
             />
           </div>
         </div>
@@ -91,9 +95,9 @@ function QuizPage() {
             <div className='modal-close' onClick={closeModal}>
             </div>
             <img
-              src={images.points}
+              src={images.correct}
               alt=''
-              onClick={() => navigate('/quiz2')}
+              onClick={() => navigate('/certificate')}
             />
           </div>
         </div>

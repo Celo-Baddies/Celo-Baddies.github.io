@@ -15,6 +15,7 @@ function Category() {
   return (
     <div className='picktopic-container'>
       <Navbar />
+      
       <div className='picktopic-inner'>
         <h2>Select Category</h2>
         <div className='picktopic-inn'>
