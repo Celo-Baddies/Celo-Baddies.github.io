@@ -29,19 +29,18 @@ function QuizPage() {
     return { mark }
   }
 
-  function checkAnswer (e) {
-    let totalPoints = 0;
+  function checkAnswer(e) {
+    let totalPoints = 0
     let options = document.getElementsByClassName('options')
-    for( let i = 0; i < options.length; i++){
-        let answer = options[i];
-        if (answer.className === 'correct'){
-          setIsModalOpen(true);
-          setAnswerWrong(false);
-
-        } else if (answer.className = 'not-correct') {
-          setAnswerWrong(true);
-          setIsModalOpen(false);
-        }
+    for (let i = 0; i < options.length; i++) {
+      let answer = options[i]
+      if (answer.className === 'correct') {
+        setIsModalOpen(true)
+        setAnswerWrong(false)
+      } else if ((answer.className = 'not-correct')) {
+        setAnswerWrong(true)
+        setIsModalOpen(false)
+      }
     }
   }
 
@@ -49,36 +48,36 @@ function QuizPage() {
     <div className='quizpage-container'>
       <Navbar />
       <div className='quizpage-inner'>
-        <h2>It was first introduced as the underlying technology behind _____, the popular cryptocurrency.</h2>
+        <h2>
+          It was first introduced as the underlying technology behind _____, the
+          popular cryptocurrency.
+        </h2>
 
-          <ul className="options">
+        <ul className='options'>
+          <li className='correct'>
+            <img src={images.q2a} alt='' onClick={() => setIsModalOpen(true)} />
+          </li>
 
-          <li className='correct'><img src={images.q2a} alt='' onClick={() => setIsModalOpen(true)}
-        /></li>
+          <li className='not-correct' onClick={checkAnswer}>
+            <img src={images.q2b} alt='' onClick={() => setIsModalOpen(true)} />
+          </li>
 
-        <li className='not-correct' onClick={checkAnswer}><img src={images.q2b} alt='' onClick={() => setIsModalOpen(true)} /></li>
+          <li className='not-correct' onClick={checkAnswer}>
+            <img src={images.q2c} alt='' onClick={() => setIsModalOpen(true)} />
+          </li>
 
-        <li className='not-correct' onClick={checkAnswer}><img  src={images.q2c} alt=''onClick={() => setIsModalOpen(true)} /></li>
+          <li className='not-correct' onClick={checkAnswer}>
+            <img src={images.q2d} alt='' onClick={() => setIsModalOpen(true)} />
+          </li>
+        </ul>
+      </div>
 
-        <li className='not-correct' onClick={checkAnswer}><img src={images.q2d} alt='' onClick={() => setIsModalOpen(true)} />
-    </li>
-          </ul>
-       
-       
-        
-        </div>
-       
-        {answerWrong ? (
+      {answerWrong ? (
         <div className='modal'>
           <div className='modal-overlay' onClick={closeModal} />
           <div className='modal-content'>
-            <div className='modal-close' onClick={closeModal}>
-            </div>
-            <img
-              src={images.fail}
-              alt=''
-              onClick={() => navigate('/quiz3')}
-            />
+            <div className='modal-close' onClick={closeModal}></div>
+            <img src={images.fail} alt='' onClick={() => navigate('/quiz3')} />
           </div>
         </div>
       ) : null}
@@ -87,8 +86,7 @@ function QuizPage() {
         <div className='modal'>
           <div className='modal-overlay' onClick={closeModal} />
           <div className='modal-content'>
-            <div className='modal-close' onClick={closeModal}>
-            </div>
+            <div className='modal-close' onClick={closeModal}></div>
             <img
               src={images.points}
               alt=''
@@ -97,7 +95,6 @@ function QuizPage() {
           </div>
         </div>
       ) : null}
-      
     </div>
   )
 }
