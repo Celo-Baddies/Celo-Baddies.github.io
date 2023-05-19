@@ -38,7 +38,7 @@ function QuizMint() {
           <img src={mintbutton} alt='' />
         </button>
 
-        {err ? (
+        {!err ? (
           <h1 style={{ color: 'red', marginTop: '50px' }}>
             LEVEL COMPLETED: Try level 2...
           </h1>
