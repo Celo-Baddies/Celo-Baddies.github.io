@@ -31,14 +31,14 @@ function QuizMint() {
       <Navbar />
       <div className='quizmint-inner'>
         <h2>CONGRATULATIONS!</h2>
-        <p>You’ve received a certificate</p>
+        <p>You’ve received a certificate and 80 BADDIETOKEN</p>
 
         <img src={certificate} alt='' onClick={() => navigate('/chat')} />
         <button onClick={mintToken}>
           <img src={mintbutton} alt='' />
         </button>
 
-        {!!err ? (
+        {err ? (
           <h1 style={{ color: 'red', marginTop: '50px' }}>
             LEVEL COMPLETED: Try level 2...
           </h1>
